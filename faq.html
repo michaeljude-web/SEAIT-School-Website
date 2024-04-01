@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SEAIT FAQ</title>
+  <link rel="icon" type="image.png" href="litrato/sea.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif
+    }
+
+    /******* Matanggal ang underline sa link ***********/
+    a {
+      text-decoration: none;
+    }
+
+
+    /****** mga kulay ng ng text na ma click *******/
+    ul,
+    li,
+    a {
+      color: gray;
+    }
+
+
+    /******** Remove underline sa list style *******/
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    /** sakop nito lahat sa taas ang seait home - contact at FQA**/
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+    /********** Pag mag 768px ang size ma apply itong sa baba ****/
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+
+    /*********992px na size naman ito ma apply sa container lahat Seait - FQA *********/
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    /********* 1200px naman pang pc mode na ***************/
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+
+    /************** End ***************/
+
+
+    /*********** Fist page unang page unang nakikita sa website ****/
+    .first-page header {
+      min-height: 80px;
+      display: flex;
+    }
+
+
+    /*****  Ipag hiwalay ang SEAIT sa taas at home contact-Faq */
+    /**kumbaga SEAIT sa left at sa right lahat ng home contact etc.*/
+
+    .first-page header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    /***** Tablet mod na ni sya *********/
+    /**** mag pataas ang seait tapos ma center sila sa baba ang home contact - FAQ ************/
+    @media (max-width: 767px) {
+      .first-page header .container {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+
+    /**** mga naka pahiga na text Seait -FAQ sa taas CAPSLOCK****/
+    .first-page header .logo {
+      color: #5d5d5d;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+
+    /******* sapace sa baba at taas pag tablet mod na 767px ********/
+    @media (max-width: 767px) {
+      .first-page header .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    .first-page header .links {
+      display: flex;
+      align-items: center;
+    }
+
+
+    @media (max-width: 767px) {
+      .first-page header .links {
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    .first-page header .links li {
+      margin-left: 30px;
+      color: #5d5d5d;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    @media (max-width: 767px) {
+      .first-page header .links li {
+        margin-left: auto;
+      }
+    }
+
+    /****Last Child sa huli ba FAQ frequency ask question to sya***/
+    .first-page header .links li:last-child {
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+
+
+    /********* Sa picture logo sa FAQ si sya *******/
+    .button__sa__fqa {
+      background-color: transparent;
+      cursor: none;
+      border: none;
+      position: relative;
+      right: 20px;
+      top: 2px;
+    }
+
+    .icon__nya {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url("litrato/faqq.png");
+      background-size: cover;
+    }
+
+    /******* end ********/
+
+    /**** sa Services naman ni sya *****/
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa {
+      display: none;
+      position: absolute;
+      background-color: #f9f8f8;
+      /***color-sa box pag click dropdown*/
+      min-width: 100px;
+      box-shadow: 0px 9px 15px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .pag-pindot-mag-show-ang_pababa a {
+      color: black;
+      padding: 13px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa a:hover {
+      color: tomato;
+    }
+
+    .dropdown:hover .pag-pindot-mag-show-ang_pababa {
+      display: block;
+    }
+
+    .dropdownbutton {
+      padding: 15px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /*** end ng sa services *******/
+
+
+
+
+
+
+
+
+
+    /***************** FAQ  Start ******************/
+
+    input {
+      display: none;
+    }
+
+    label {
+      display: block;
+      padding: 8px 22px;
+      margin: 0 0 1px 0;
+      cursor: pointer;
+      background: #8C5050;
+      border-radius: 3px;
+      color: #FFF;
+      transition: ease .5s;
+    }
+
+    label:hover {
+      background: #4E8774;
+    }
+
+    .content {
+      background: #E2E5F6;
+      padding: 10px 25px;
+      border: 1px solid #A7A7A7;
+      margin: 0 0 1px 0;
+      border-radius: 3px;
+    }
+
+    input:checked+label+.content {
+      display: block;
+    }
+
+
+
+    /***************** FAQ End ****************/
+
+
+
+
+
+
+
+
+    /****************  Footer   *************/
+
+    .footer__container {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 5rem;
+      background-color: light;
+    }
+
+    .Four_section_down__footer h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer p {
+      margin-bottom: 1rem;
+      color: #665F5F;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .Four_section_down__footer p:hover {
+      color: #861212;
+    }
+
+
+    @media (width < 900px) {
+      .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (width < 600px) {
+      .footer__container {
+        gap: 2rem;
+      }
+    }
+
+    #u {
+      color: gray;
+    }
+
+    p a {
+      text-decoration: none;
+    }
+
+    #all__about_us_masakop {
+      margin-top: 60px;
+    }
+
+
+    /************* Footer End ***************/
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Start fist Page -->
+  <div class="first-page">
+    <header>
+      <div class="container">
+        <a class="logo">SEA<b>IT</b></a>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+
+
+          <!-- dropdown sa services pag click ma show pababa ang VLE -->
+          <li>
+            <div class="dropdown">
+              <p class="dropdownbutton">Service</p>
+              <div class="pag-pindot-mag-show-ang_pababa">
+                <a href="https://form.jotform.com/212148256429053">REQUEST FOR GRADE</a></a>
+                <a href="https://vle.seait-edu.ph/">VLE-VIRTUAL LEARNING ENVIRONMENT</a>
+              </div>
+            </div>
+          </li>
+          <!-- End nya -->
+
+          <!-- Sa about contact naman-->
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <!-- End nila -->
+
+            <!-- sa LoGo ka FAQ na picture ni sya-->
+            <button class="button__sa__fqa"><a href="faq.html">
+                <span class="icon__nya"></span></a>
+            </button>
+          </li>
+        </ul>
+        <!-- end FQA -->
+      </div>
+    </header>
+    <!-- End sa tanan sa top Nav bar -->
+
+
+
+
+
+
+    <!-- FAQ start -->
+
+    <p id="frequently" style="font-size: 30px;">Frequently Ask Questions</p>
+    <p id="f2">
+      Get a question? we're here to answer! If you don't see your question here, send us on our email
+      address seaitinc@yahoo.com.
+    </p>
+
+    <input type="checkbox" id="1" />
+    <label for="1">1. How to enrol to your chosen course?</label>
+
+    <div class="content">
+      <p>● "Please secure to your online pre-registration."</p>
+      <p>● Link: <a href="http://seait-edu.ph/registration/">http://seait-edu.ph/registration/</a></p>
+      <p>● <b>Documents:</b></p>
+      <p><b>New Students:</b></p>
+      <p>Original Form 138 or Report Card</p>
+      <p>Photocopy of Diploma</p>
+      <p>Photocopy PSA BIRTH Certificate</p>
+      <p>Certificate of Good Moral Character</p>
+      <p>2pcs 2x2 picture with white background</p>
+      <p><b>Old Students:</b></p>
+      <p>Transcript of Records</p>
+      <p>Certificate of Transfer Credential</p>
+      <p>Photocopy of PSA Birth Certificate</p>
+      <p>Certificate of Good Moral Character</p>
+      <p>2pcs 2x2 picture with white background</p>
+      <p><b>Note:</b>Students of legal age, 21 above, may immediately submit their original
+        documents at school registrar while, those who are under age are ask to look for
+        authorized proxy to submit their documents. For outside South Cotabato, kindly
+        wait for further instruction. Just secure the pre-enrolment.</p>
+    </div>
+
+
+
+
+
+    <input type="checkbox" id="2" />
+    <label for="2">2. Where to find the link of enrolment?</label>
+
+    <div class="content">
+      <p>● Link: <a href="http://seait-edu.ph/registration/">http://seait-edu.ph/registration/</a></p>
+    </div>
+
+    <input type="checkbox" id="3" />
+    <label for="3">3. What are the class modalities / mode of learnings to be adopted by the school?</label>
+
+    <div class="content">
+      <p>● The school will be adopting Blended learning which includes: Face-face, Modular,
+        LMS</p>
+    </div>
+    <input type="checkbox" id="4" />
+    <label for="4">4. What are the different scholarship grants offered by the school?</label>
+
+    <div class="content">
+      <p>● SCHOLARSHIP (to be facilitated by the school)</p>
+      <p> &nbsp; &nbsp; &nbsp; ● UNIFAST</p>
+      <p> &nbsp; &nbsp; &nbsp; ● RMT CARE FOUNDATION</p>
+      <p> &nbsp; &nbsp; &nbsp; ● LGU</p>
+      <p> &nbsp; &nbsp; &nbsp; ● DOST</p>
+      <p> &nbsp; &nbsp; &nbsp; ● KABUGWASON</p>
+      <p> &nbsp; &nbsp; &nbsp; ● TULONG-DUNONG</p>
+      <p> &nbsp; &nbsp; &nbsp; ● GEMMA CONSTRUCTION</p>
+      <p> &nbsp; &nbsp; &nbsp; ● CHED SCHOLARSHIP PROGRAM</p>
+      <p> &nbsp; &nbsp; &nbsp; ● INSTITUTIONAL</p>
+
+      <p>● Requirements Certificate of Indigency</p>
+      <p>&nbsp; &nbsp; &nbsp; 1pc 2x2 picture with white background.</p>
+      <p><b>Note:</b>Students of legal age, 21 above, may immediately submit their original documents
+        at school registrar while, those who are under age are ask to look for authorized proxy to
+        submit their documents.</p>
+
+      <p>
+        For outside South Cotabato, kindly wait for further instruction. Just secure the pre-
+        enrolment.
+      </p>
+    </div>
+    <input type="checkbox" id="5" />
+    <label for="5">5. is the school open for walk inquiries?</label>
+
+    <div class="content">
+      <p>● Yes Only for student who are in legal age or authorized proxy.</p>
+    </div>
+
+
+
+    <input type="checkbox" id="6" />
+    <label for="6">6. What is the school ID?</label>
+
+    <div class="content">
+      <p>● BED 406031</p>
+      <p>● College 12115</p>
+    </div>
+
+
+    <input type="checkbox" id="7" />
+    <label for="7">7. Exact location of the school?</label>
+
+    <div class="content">
+      <p>● NATIONAL HIGHWAY, CROSSING RUBBER TUPI, SOUTH COTABATO.</p>
+    </div>
+
+
+    <input type="checkbox" id="8" />
+    <label for="8">8. What are the official office hours and days of the school for those who are processing TOR and
+      other documents?</label>
+
+    <div class="content">
+      <p>● &nbsp;Monday - Friday &nbsp; &nbsp; &nbsp; &nbsp; 8:00 - 11:30am, 1:00 - 4:30pm</p>
+
+      <p>● &nbsp; Saturday &nbsp; &nbsp; &nbsp; &nbsp;8:00 - 11:30am</p>
+    </div>
+    <!-- FAQ End -->
+
+
+
+
+
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footer__container">
+        <div class="Four_section_down__footer">
+          <h3>SEA<b style="color:tomato;">IT</b></h3>
+          <p>
+            South East Asian Institute of Technology
+            <br>SEAIT is a private, non-stock and non-profit
+            Higher Education Institution in
+            SOCCSKSARGEN.
+          </p>
+        </div>
+        <div class="Four_section_down__footer">
+          <h4>Contact Us</h4>
+          <p>✉️&nbsp;seaitinc@yahoo.com REGISTAR</p>
+          <p>📞 (083) 226-1202 REGISTAR </p>
+
+        </div>
+
+        <div class="Four_section_down__footer">
+          <h4>Location</h4>
+          <p>➤ 9505 Tupi, South Cotabato, Philippines</p>
+        </div>
+
+        <div class="Four_section_down__footer">
+          <h4>Social Media</h4>
+          <p><a href="https://www.facebook.com/SEAITOfficial" id="u">Facebook</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+
+    </style>
+
+
+</body>
+
+</html>

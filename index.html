@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SEAIT</title>
+  <link rel="icon" type="image.png" href="litrato/sea.png">
+  <style>
+    * { box-sizing: border-box;   font-family: 'Open Sans', sans-serif }
+
+    /******* Matanggal ang underline sa link ***********/
+    a { text-decoration: none; }
+
+    /******** Remove underline sa list style *******/
+    ul { list-style: none;
+         padding: 0;
+         margin: 0;
+       }
+
+    /** sakop nito lahat sa taas ang seait home - contact at FQA**/
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /********** Pag mag 768px ang size ma apply itong sa baba ****/
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+    /*********992px na size naman ito ma apply sa container lahat Seait - FAQ *********/
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    /********* 1200px naman pang pc mode na ***************/
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+    /************** End ***************/
+
+
+    /*********** Fist page unang page unang nakikita sa website ****/
+    .first-page header {
+      min-height: 80px;
+      display: flex;
+    }
+
+    /*****  Ipag hiwalay ang SEAIT sa taas at home contact-Fqa */
+    /**kumbaga SEAIT sa left at sa right lahat ng home contact etc.*/
+
+    .first-page header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    /***** Tablet mod na ni sya *********/
+    /**** mag pataas ang seait tapos ma center sila sa baba ang home contact - FAQ ************/
+    @media (max-width: 767px) {
+      .first-page header .container {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+
+    /**** mga naka pahiga na text Seait -FAQ sa taas CAPSLOCK****/
+    .first-page header .logo {
+      color: #5d5d5d;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+
+    /******* sapace sa baba at taas pag tablet mod na 767px ********/
+    @media (max-width: 767px) {
+      .first-page header .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    .first-page header .links {
+      display: flex;
+      align-items: center;
+    }
+
+
+    @media (max-width: 767px) {
+      .first-page header .links {
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    .first-page header .links li {
+      margin-left: 30px;
+      color: #5d5d5d;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    @media (max-width: 767px) {
+      .first-page header .links li {
+        margin-left: auto;
+      }
+    }
+
+    /****Last Child sa huli ba FAQ frequency ask question to sya***/
+    .first-page header .links li:last-child {
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+
+
+    /********* Sa picture logo sa FAQ si sya *******/
+    .button__sa__fqa {
+      background-color: transparent;
+      cursor: none;
+      border: none;
+      position: relative;
+      right: 20px;
+      top: 2px;
+    }
+
+    .icon__nya {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url("litrato/faqq.png");
+      background-size: cover;
+    }
+
+    /******* end ********/
+
+
+
+
+    /**** sa Services *****/
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa {
+      display: none;
+      position: absolute;
+      background-color: #f9f8f8;
+      /***color-sa box pag click dropdown*/
+      min-width: 100px;
+      box-shadow: 0px 9px 15px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .pag-pindot-mag-show-ang_pababa a {
+      color: black;
+      padding: 13px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa a:hover {
+      color: tomato;
+    }
+
+    .dropdown:hover .pag-pindot-mag-show-ang_pababa {
+      display: block;
+    }
+
+    .dropdownbutton {
+      padding: 15px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /*** end ng sa services sa gilid ng home*******/
+
+
+
+
+
+
+    /***** sa whole page sa first page sa baba na ni sya mga picture, button, South East Asian Institute Of Technology na******/
+
+    .first-page .content .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 140px;
+      min-height: calc(100vh - 80px);
+    }
+
+    @media (max-width: 767px) {
+      .first-page .content .container {
+        gap: 0;
+        min-height: calc(100vh - 101px);
+        justify-content: center;
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .first-page .content .info {
+        text-align: center;
+        margin-bottom: 15px
+      }
+    }
+
+    .first-page .content .info h1 {
+      color: #5d5d5d;
+      font-size: 44px;
+    }
+
+    .first-page .content .info p {
+      margin: 0;
+      line-height: 1.6;
+      font-size: 15px;
+      color: #5d5d5d;
+    }
+
+    .first-page .content .info button {
+      border: 0;
+      border-radius: 20px;
+      padding: 12px 30px;
+      margin-top: 30px;
+      cursor: pointer;
+      color: #FFF;
+      background-color: #6c63ff;
+    }
+
+    .first-page .content .image img {
+      max-width: 100%;
+    }
+
+    /****** end sa first page *******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /******************** School  Mission & Vision **************/
+    .main__content-backgroundNa-gray-sa-welcome-hanngang_sa_baba {
+      background-color: #F6F6F6;
+    }
+
+    .grid {
+      margin-top: 4rem;
+    }
+
+    .mga__boxes_sa_mision__vision {
+      padding: 2rem;
+      background-color: white;
+      border-radius: 0.5rem;
+      /*****0.5na pa hugis bilog or 8px sa kada mission vision at core values***/
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .Text__sa__welcome_to_our_school {
+      text-align: center;
+      font-size: 40px;
+      color: #5E5C5C;
+    }
+
+    .mga__boxes_sa_mision__vision p {
+      text-align: center;
+    }
+
+
+    /**************** End School Mission & Vision  **************/
+
+
+
+
+
+    /******************** Our Services *************************/
+
+    .services_na_text {
+      text-align: center;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+
+    .container-nila {
+      background: Light;
+      padding: 15px 9%;
+      padding-bottom: 100px;
+    }
+
+    .all__page_style__services .heading {
+      text-align: center;
+      padding-bottom: 15px;
+      color: #fff;
+      text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+      font-size: 50px;
+    }
+
+    .all__page_style__services .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 15px;
+    }
+
+    .all__page_style__services .box-container .box-na-6 {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+      border-radius: 5px;
+      background: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .all__page_style__services .box-container .box-na-6 img {
+      height: 80px;
+    }
+
+    .all__page_style__services .box-container .box-na-6 h3 {
+      color: #444;
+      font-size: 22px;
+      padding: 10px 0;
+    }
+
+    .all__page_style__services .box-container .box-na-6 p {
+      color: #777;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .all__page_style__services .box-container .box-na-6 .btn {
+      margin-top: 10px;
+      display: inline-block;
+      background: #333;
+      color: #fff;
+      font-size: 17px;
+      border-radius: 5px;
+      padding: 8px 25px;
+    }
+
+    .all__page_style__services .box-container .box-na-6 .btn:hover {
+      letter-spacing: 1px;
+    }
+
+
+
+    @media (max-width:768px) {
+      .container {
+        padding: 20px;
+      }
+    }
+
+
+    /********************* Our services end **********************/
+
+
+
+
+
+
+
+
+
+
+    /******************* Popular Courses Style Start **************/
+
+    .division {
+      padding: 5px;
+
+    }
+
+    .text_na__our__Popular__Courses {
+      font-size: 40px;
+      color: #5E5E5E;
+      text-align: center;
+    }
+
+
+    .courses_container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .box-ng-courses {
+      background-color: white;
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .box-ng-courses img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width:768px) {
+      .box-ng-courses {
+        width: 100%;
+      }
+    }
+
+    .isang_boong_page__ng_courses_yung_kulay_graywhite {
+      background: #F7F7F7;
+    }
+
+    .view__all_course {
+      margin-left: 70%;
+    }
+
+    .view__all_course {
+      text-decoration: none;
+
+    }
+
+    /************************ Popular Courses End *****************/
+
+
+
+
+
+    .footer__container {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 5rem;
+      background-color: light;
+    }
+
+    .Four_section_down__footer h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer p {
+      margin-bottom: 1rem;
+      color: #665F5F;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .Four_section_down__footer p:hover {
+      color: #861212;
+    }
+
+
+    @media (width < 900px) {
+      .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (width < 600px) {
+      .footer__container {
+        gap: 2rem;
+      }
+    }
+
+    #u {
+      color: gray;
+    }
+
+    p a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Start fist Page -->
+  <div class="first-page">
+    <header>
+      <div class="container">
+        <a class="logo">SEA<b>IT</b></a>
+        <ul class="links">
+          <li><a href="index.html" style="color: gray;">Home</a></li>
+
+
+          <!-- dropdown sa services pag click ma show pababa ang VLE -->
+          <li>
+            <div class="dropdown">
+              <p class="dropdownbutton" style="color: gray;">Service</p>
+              <div class="pag-pindot-mag-show-ang_pababa">
+                <a href="https://form.jotform.com/212148256429053">REQUEST FOR GRADE</a></a>
+                <a href="https://vle.seait-edu.ph/">VLE-VIRTUAL LEARNING ENVIRONMENT</a>
+              </div>
+            </div>
+          </li>
+          <!-- End nya -->
+
+          <!-- Sa about contact naman-->
+          <li><a href="about.html" style="color: gray;">About</a></li>
+
+          <li><a href="contact.html" style="color: gray;">Contact</a></li>
+          <li>
+            <!-- End nila -->
+
+            <!-- sa LoGo ka FAQ na picture ni sya-->
+            <button class="button__sa__fqa"><a href="faq.html">
+                <span class="icon__nya"></span></a>
+            </button>
+          </li>
+        </ul>
+        <!-- end FQA -->
+      </div>
+    </header>
+    <!-- End sa tanan sa top Nav bar -->
+
+
+    <div class="content">
+      <div class="container">
+        <div class="info">
+          <h1>South East Asian Institute of Technology </h1>
+          <p>We look forward to serving you the best education you need to fulfill your dreams! Our institution welcomes
+            you! We will make sure that we will have the support and encouragement you as you embark on your academic
+            journey with us!</p>
+          <button>Register</button>
+        </div>
+        <div class="image">
+          <img src="litrato/alen.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End fist Page -->
+
+
+
+
+
+
+  <!-- mission & Vis... start-->
+
+  <section class="main__content-backgroundNa-gray-sa-welcome-hanngang_sa_baba">
+    <div>
+      <p class="Text__sa__welcome_to_our_school">Welcome to Our School </p>
+      <div class="grid">
+        <div class="mga__boxes_sa_mision__vision">
+          <p style="font-size: 30px;">MISSION</p>
+          <p>TO PRODUCE COMPETENT COMMUNITY - ORIENTED AND GLOBALLY COMPETITIVE INDIVIDUALS THROUGH HOLISTIC EDUCATION
+          </p>
+        </div>
+        <div class="mga__boxes_sa_mision__vision">
+          <p style="font-size: 30px;">VISION</p>
+          <p>
+            A PREMIER INSTITUTION THAT PROVIDES QUALITY EDUCATION AND GLOBALLY EMPOWERED INDIVIDUALS
+          </p>
+        </div>
+        <div class="mga__boxes_sa_mision__vision">
+          <p style="font-size: 30px;">CORE VALUES</p>
+          <p>
+            SERVICE <br> <br>EXCELLENCE <br><br> ACCOUNTABILITY <br><br>INNOVATION<br> <br> TEAMWORK
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- mission & Vis... End-->
+
+
+
+  <!-- Services  Start-->
+
+  <div class="all__page_style__services">
+
+    <p class="services_na_text">our services</p>
+
+    <div class="box-container">
+
+      <div class="box-na-6">
+        <img src="litrato/icon-1.png">
+        <h3>Students Assistance</h3>
+        <p>systemic process using techniques to
+          mobilize SEAIT resources to remove
+          barriers to learning </p>
+      </div>
+
+      <div class="box-na-6">
+        <img src="litrato/icon-2.png">
+        <h3>Library Services</h3>
+        <p>provided by the library to online students
+          can include instruction on how to access
+          and use library materials and more</p>
+      </div>
+
+      <div class="box-na-6">
+        <img src="litrato/icon-3.png">
+        <h3>Silakbo</h3>
+        <p>adds a lot of value to the institution.
+          SILAKBO keeps the community informed
+          of important happenings</p>
+      </div>
+
+      <div class="box-na-6">
+        <img src="litrato/icon-4.png">
+        <h3>Guidance Center</h3>
+        <p>supply pertinent facts and data which
+          provide information relevant to the
+          school community.</p>
+      </div>
+
+      <div class="box-na-6">
+        <img src="litrato/icon-5.png">
+        <h3>Sports and Athletic</h3>
+        <p>South East Asian Institute of Technology
+          is currentiy and an active member of the
+          Private Schools Athletic Association
+          (PRISAA).</p>
+      </div>
+
+      <div class="box-na-6">
+        <img src="litrato/icon-6.png">
+        <h3>Health Services</h3>
+        <p>contribute to the goals of the education
+          system and the healthcare system by
+          providing screenings and referrals,
+          administering medications and more</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Services End-->
+
+
+
+
+
+  <!-- Courses -->
+  <section class="isang_boong_page__ng_courses_yung_kulay_graywhite">
+    <div class="division">
+      <p class="text_na__our__Popular__Courses">Courses Offered</p>
+    </div>
+    <div class="courses_container">
+      <div class="box-ng-courses">
+        <img src="litrato/it1.jpg">
+        <h2>BSIT</h2>
+        <p>Bachelor of Science in Information Technology</p>
+
+      </div>
+      <div class="box-ng-courses">
+        <img src="litrato/cr_cleanup.jpg">
+        <h2>BSCRIME</h2>
+        <p>Bachelor of Science in Criminology</p>
+      </div>
+      <div class="box-ng-courses">
+        <img src="litrato/hm.jpg">
+        <h2>BSHM</h2>
+        <p>Bachelor of Science in Hospitality Management</p>
+      </div>
+      <div class="box-ng-courses">
+        <img src="litrato/trr.jpg">
+        <h2>BSED MATH</h2>
+        <p>Bachelor of Secondary Education major in Mathematics</p>
+      </div>
+      <div class="box-ng-courses">
+        <img src="litrato/cv.jpg">
+        <h2>BSCE</h2>
+        <p>Bachelor of Science in Civil Engineering</p>
+      </div>
+      <div class="box-ng-courses">
+        <img src="litrato/educ_v1.jpg">
+        <h2>BEED</h2>
+        <p>Bachelor in Elementary Education</p>
+      </div>
+      <p class="view__all_course"><a href="courses.html">View all Courses</a></p>
+    </div>
+  </section>
+  <!-- Courses End na -->
+
+  <!-- footer -->
+
+  <footer>
+    <div class="footer__container">
+      <div class="Four_section_down__footer">
+        <h3>SEA<b style="color:tomato;">IT</b></h3>
+        <p>
+          South East Asian Institute of Technology
+          <br>SEAIT is a private, non-stock and non-profit
+          Higher Education Institution in
+          SOCCSKSARGEN.
+        </p>
+      </div>
+      <div class="Four_section_down__footer">
+        <h4>Contact Us</h4>
+        <p>✉️&nbsp;seaitinc@yahoo.com REGISTAR</p>
+        <p>📞 (083) 226-1202 REGISTAR </p>
+
+      </div>
+
+      <div class="Four_section_down__footer">
+        <h4>Location</h4>
+        <p>➤ 9505 Tupi, South Cotabato, Philippines</p>
+      </div>
+
+      <div class="Four_section_down__footer">
+        <h4>Social Media</h4>
+        <p><a href="https://www.facebook.com/SEAITOfficial" id="u">Facebook</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- End footer -->
+
+
+
+
+
+
+</body>
+
+</html>

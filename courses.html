@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Courses Offered</title>
+  <link rel="icon" type="image.png" href="litrato/sea.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif
+    }
+
+
+
+
+    /******* Matanggal ang underline sa link ***********/
+    a {
+      text-decoration: none;
+    }
+
+
+    /****** mga kulay ng ng text na ma click *******/
+    ul,
+    li,
+    a {
+      color: gray;
+    }
+
+
+    /******** Remove underline sa list style *******/
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    /** sakop nito lahat sa taas ang seait home - contact at FAQ**/
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+    /********** Pag mag 768px ang size ma apply itong sa baba ****/
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+
+    /*********992px na size naman ito ma apply sa container lahat Seait - FAQ *********/
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    /********* 1200px naman pang pc mode na ***************/
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+
+    /************** End ***************/
+
+
+
+
+    /*********** Fist page unang page unang nakikita sa website ****/
+    .first-page header {
+      min-height: 80px;
+      display: flex;
+    }
+
+
+    /*****  Ipag hiwalay ang SEAIT sa taas at home contact-Fqa */
+    /**kumbaga SEAIT sa left at sa right lahat ng home contact etc.*/
+
+    .first-page header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    /***** Tablet mod na ni sya *********/
+    /**** mag pataas ang seait tapos ma center sila sa baba ang home contact - FQA ************/
+    @media (max-width: 767px) {
+      .first-page header .container {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+
+    /**** mga naka pahiga na text Seait -FQA sa taas CAPSLOCK****/
+    .first-page header .logo {
+      color: #5d5d5d;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+
+    /******* sapace sa baba at taas pag tablet mod na 767px ********/
+    @media (max-width: 767px) {
+      .first-page header .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    .first-page header .links {
+      display: flex;
+      align-items: center;
+    }
+
+
+    @media (max-width: 767px) {
+      .first-page header .links {
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    .first-page header .links li {
+      margin-left: 30px;
+      color: #5d5d5d;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    @media (max-width: 767px) {
+      .first-page header .links li {
+        margin-left: auto;
+      }
+    }
+
+    /****Last Child sa huli ba FQA frequency ask question to sya***/
+    .first-page header .links li:last-child {
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+
+
+    /********* Sa picture logo sa FQA si sya *******/
+    .button__sa__fqa {
+      background-color: transparent;
+      cursor: none;
+      border: none;
+      position: relative;
+      right: 20px;
+      top: 2px;
+    }
+
+    .icon__nya {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url("litrato/faqq.png");
+      background-size: cover;
+    }
+
+    /******* end ********/
+
+    /**** sa Services naman ni sya *****/
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa {
+      display: none;
+      position: absolute;
+      background-color: #f9f8f8;
+      /***color-sa box pag click dropdown*/
+      min-width: 100px;
+      box-shadow: 0px 9px 15px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .pag-pindot-mag-show-ang_pababa a {
+      color: black;
+      padding: 13px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa a:hover {
+      color: tomato;
+    }
+
+    .dropdown:hover .pag-pindot-mag-show-ang_pababa {
+      display: block;
+    }
+
+    .dropdownbutton {
+      padding: 15px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /*** end ng sa services *******/
+
+
+
+
+
+
+
+    /******** Courses Start ***********************/
+
+    main {
+      margin: 15px;
+    }
+
+    #courses__offered__ito_na_text_sagitna {
+      color: #2A2626;
+      text-align: center;
+      font-weight: normal;
+      font-size: 26px;
+    }
+
+    .sakop__nito__lahat_ng_courses_saWEB {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .course__boxes__ng_page_bali_anim_na__boxes {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 45%;
+      margin-bottom: 20px;
+    }
+
+    .course__boxes__ng_page_bali_anim_na__boxes {
+      color: black;
+    }
+
+    .course__boxes__ng_page_bali_anim_na__boxes p {
+      margin-bottom: 10px;
+    }
+
+
+    /*** 897px size mag pababa na sila ***/
+    @media (max-width: 897px) {
+      .course__boxes__ng_page_bali_anim_na__boxes {
+        width: 100%;
+      }
+    }
+
+
+    #College__OF__Na_text {
+      text-align: center;
+      background: tomato;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /***************** Courses End ********************/
+
+
+
+
+
+
+    /****************  Footer   *************/
+
+    .footer__container {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 5rem;
+      background-color: light;
+    }
+
+    .Four_section_down__footer h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer p {
+      margin-bottom: 1rem;
+      color: #665F5F;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .Four_section_down__footer p:hover {
+      color: #861212;
+    }
+
+
+    @media (width < 900px) {
+      .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (width < 600px) {
+      .footer__container {
+        gap: 2rem;
+      }
+    }
+
+    #u {
+      color: gray;
+    }
+
+    p a {
+      text-decoration: none;
+    }
+
+    #all__about_us_masakop {
+      margin-top: 60px;
+    }
+
+
+    /************* Footer End ***************/
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Start fist Page -->
+  <div class="first-page">
+    <header>
+      <div class="container">
+        <a class="logo">SEA<b>IT</b></a>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+
+
+          <!-- dropdown sa services pag click ma show pababa ang VLE -->
+          <li>
+            <div class="dropdown">
+              <p class="dropdownbutton">Service</p>
+              <div class="pag-pindot-mag-show-ang_pababa">
+                <a href="https://form.jotform.com/212148256429053">REQUEST FOR GRADE</a></a>
+                <a href="https://vle.seait-edu.ph/">VLE-VIRTUAL LEARNING ENVIRONMENT</a>
+              </div>
+            </div>
+          </li>
+          <!-- End nya -->
+
+          <!-- Sa about contact naman-->
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <!-- End nila -->
+
+            <!-- sa LoGo ka FQA na picture ni sya-->
+            <button class="button__sa__fqa"><a href="faq.html">
+                <span class="icon__nya"></span></a>
+            </button>
+          </li>
+        </ul>
+        <!-- end FQA -->
+      </div>
+    </header>
+    <!-- End sa tanan sa top Nav bar -->
+
+
+
+
+
+
+
+    <!-- Courses Start -->
+    <main>
+      <h2 id="courses__offered__ito_na_text_sagitna">Courses Offered</h2><br><br>
+
+      <!-- Information Technology-->
+
+      <div class="sakop__nito__lahat_ng_courses_saWEB">
+        <div class="course__boxes__ng_page_bali_anim_na__boxes">
+          <h3 id="College__OF__Na_text">COLLEGE OF INFORMATION AND COMMUNICATION TECHNOLOGY</h3>
+          <p style="font-weight: bold; color: #457B9D;">COURSES:</p>
+          <p>ASSOCIATE IN COMPUTER TECHNOLOGY</p>
+          <p>BS INFORMATION TECHNOLOGY</p>
+          <p> BS COMPUTER TECHNOLOGY</p>
+          <p><b style="color: gray">Specialized in:</b><br>BUSINESS ANALYTICS</p>
+        </div>
+
+
+
+
+
+        <!-- Agriculture -->
+
+        <div class="course__boxes__ng_page_bali_anim_na__boxes">
+          <h3 id="College__OF__Na_text">COLLEGE OF AGRICULTURE AND FISHERIES</h3>
+          <p style="font-weight: bold; color: #457B9D;">COURSES:</p>
+          <p>BS AGRICULTURE</p>
+          <p><b style="color: gray;">Major in:</b><br>HORTICULTURE<br>PLANT BREEDING AND GENETICS</b></p>
+          <p><b style="color: gray;">Specialized in:</b><br>
+            ANIMAL SCIENCE <br>
+            CROP SCIENCE<br>
+            BS FISHERIES </p>
+          <p>BS FISHERIES</p>
+        </div>
+
+
+
+
+        <!-- Criminology -->
+
+        <div class="course__boxes__ng_page_bali_anim_na__boxes">
+          <h3 id="College__OF__Na_text">COLLEGE OF CRIMINAL JUSTICE EDUCATION</h3>
+          <p style="font-weight: bold; color: #457B9D;">COURSES: </p>
+          <p>BS CRIMINOLOGY</p>
+        </div>
+
+
+
+        <!-- Engineering -->
+
+        <div class="course__boxes__ng_page_bali_anim_na__boxes">
+          <h3 id="College__OF__Na_text">COLLEGE OF ENGINEERING</h3>
+          <p style="font-weight: bold; color: #457B9D;">COURSES:</p>
+          <p>BS CIVIL ENGINEERING</p>
+          <p><b style="color: gray;">Specialized in:</b><br>STRUCTURAL ENGINEER</p>
+        </div>
+
+
+
+        <!-- education -->
+
+        <div class="course__boxes__ng_page_bali_anim_na__boxes">
+          <h3 id="College__OF__Na_text">COLLEGE OF TEACHER EDUCATION</h3>
+          <p style="font-weight: bold; color: #457B9D;">COURSES:</p>
+          <p>BACHELOR OF SECONDARY EDUCATION</p>
+          <div style="font-size: 14px;">
+            <p><b style="color: gray;">Major in:</b><br>ENGLISH<br>MATHEMATICS<br>SOCIAL STUDIES<br>SCIENCE<br>FILIPINO
+            </p>
+          </div>
+          <p>BACHELOR OF ELEMENTARY EDUCATION</p>
+          <p>BACHELOR OF EARLY CHILDHOOD EDUCATION</p>
+        </div>
+
+
+
+
+        <!-- business -->
+
+        <div class="course__boxes__ng_page_bali_anim_na__boxes">
+          <h3 id="College__OF__Na_text">COLLEGE OF BUSINESS AND GOOD GOVERNANCE</h3>
+          <p style="font-weight: bold; color: #457B9D;">COURSES:</p>
+          <p>ASSOCIATE IN HOSPITALITY MANAGEMENT<br>
+            BS HOSPITALITY MANAGEMENT <br>BS TOURISM MANAGEMENT<br>BS BUSINESS ADMINISTRATION<br><b
+              style="color: gray;">Major in:</b><br>MARKETING MANAGEMENT</b></p>
+          <p>BS ACCOUNTING INFORMATION SYSTEM</p>
+          <p>BS SOCIAL WORK</p>
+          <p>BACHELOR OF PUBLIC ADMINISTRATION</p>
+
+
+        </div>
+    </main>
+    <!-- Courses End -->
+
+
+
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footer__container">
+        <div class="Four_section_down__footer">
+          <h3>SEA<b style="color:tomato;">IT</b></h3>
+          <p>
+            South East Asian Institute of Technology
+            <br>SEAIT is a private, non-stock and non-profit
+            Higher Education Institution in
+            SOCCSKSARGEN.
+          </p>
+        </div>
+        <div class="Four_section_down__footer">
+          <h4>Contact Us</h4>
+          <p>✉️&nbsp;seaitinc@yahoo.com REGISTAR</p>
+          <p>📞 (083) 226-1202 REGISTAR </p>
+
+        </div>
+
+        <div class="Four_section_down__footer">
+          <h4>Location</h4>
+          <p>➤ 9505 Tupi, South Cotabato, Philippines</p>
+        </div>
+
+        <div class="Four_section_down__footer">
+          <h4>Social Media</h4>
+          <p><a href="https://www.facebook.com/SEAITOfficial" id="u">Facebook</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+  </div>
+
+</body>
+
+</html>

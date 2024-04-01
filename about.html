@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ABOUT SEAIT</title>
+  <link rel="icon" type="image.png" href="litrato/sea.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif
+    }
+
+    /******* Matanggal ang underline sa link ***********/
+    a {
+      text-decoration: none;
+    }
+
+
+    /****** mga kulay ng ng text na ma click *******/
+    ul,
+    li,
+    a {
+      color: gray;
+    }
+
+
+    /******** Remove underline sa list style *******/
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    /** sakop nito lahat sa taas ang seait home - contact at FQA**/
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+    /********** Pag mag 768px ang size ma apply itong sa baba ****/
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+
+    /*********992px na size naman ito ma apply sa container lahat Seait - FQA *********/
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    /********* 1200px naman pang pc mode na ***************/
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+
+    /************** End ***************/
+
+
+
+
+    /*********** Fist page unang page unang nakikita sa website ****/
+    .first-page header {
+      min-height: 80px;
+      display: flex;
+    }
+
+
+    /*****  Ipag hiwalay ang SEAIT sa taas at home contact-Faq */
+    /**kumbaga SEAIT sa left at sa right lahat ng home contact etc.*/
+
+    .first-page header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    /***** Tablet mod na ni sya *********/
+    /**** mag pataas ang seait tapos ma center sila sa baba ang home contact - FAQ ************/
+    @media (max-width: 767px) {
+      .first-page header .container {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+
+    /**** mga naka pahiga na text Seait -FAQ sa taas CAPSLOCK****/
+    .first-page header .logo {
+      color: #5d5d5d;
+
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+
+    /******* sapace sa baba at taas pag tablet mod na 767px ********/
+    @media (max-width: 767px) {
+      .first-page header .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    .first-page header .links {
+      display: flex;
+      align-items: center;
+    }
+
+
+    @media (max-width: 767px) {
+      .first-page header .links {
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    .first-page header .links li {
+      margin-left: 30px;
+      color: #5d5d5d;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    @media (max-width: 767px) {
+      .first-page header .links li {
+        margin-left: auto;
+      }
+    }
+
+    /****Last Child sa huli ba FAQ frequency ask question to sya***/
+    .first-page header .links li:last-child {
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
+
+
+    /********* Sa picture logo sa FAQ si sya *******/
+    .button__sa__fqa {
+      background-color: transparent;
+      cursor: none;
+      border: none;
+      position: relative;
+      right: 20px;
+      top: 2px;
+    }
+
+    .icon__nya {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url("litrato/faqq.png");
+      background-size: cover;
+    }
+
+    /******* end ********/
+
+    /**** sa Services naman ni sya *****/
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa {
+      display: none;
+      position: absolute;
+      background-color: #f9f8f8;
+      /***color-sa box pag click dropdown*/
+      min-width: 100px;
+      box-shadow: 0px 9px 15px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .pag-pindot-mag-show-ang_pababa a {
+      color: black;
+      padding: 13px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .pag-pindot-mag-show-ang_pababa a:hover {
+      color: tomato;
+    }
+
+    .dropdown:hover .pag-pindot-mag-show-ang_pababa {
+      display: block;
+    }
+
+    .dropdownbutton {
+      padding: 15px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /*** end ng sa services *******/
+
+
+
+
+
+    /************ About Start **************/
+    #pic {
+      width: 100%;
+      height: auto;
+    }
+
+    #WELCOME__TO__SEAIT{
+      margin-top: 27px;
+    }
+
+
+
+    #About__Us_At__Our__History,
+    #WELCOME__TO__SEAIT {
+      font-weight: bolder;
+      opacity: 0.5;
+    }
+
+    #WELCOME__TO__SEAIT {
+      height: 22px;
+      text-align: center;
+    }
+
+
+    #About__Us_At__Our__History {
+      font-size: 24px;
+      text-align: left;
+      font-weight: bolder;
+      height: 16px;
+      padding-left: 60px;
+      position: relative;
+      top: 32px;
+    }
+
+    #all__small____text {
+      padding: 60px 60px;
+      width: 100%;
+      font-size: 17px;
+      color: black;
+      text-align: left;
+      opacity: 0.6;
+    }
+
+    .color__background {
+      background: #F7F7FC;
+    }
+
+    /**************** About End ****************/
+
+
+
+
+
+
+
+    /****************  Footer   *************/
+
+    .footer__container {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 5rem;
+      background-color: light;
+    }
+
+    .Four_section_down__footer h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+    }
+
+    .Four_section_down__footer p {
+      margin-bottom: 1rem;
+      color: #665F5F;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .Four_section_down__footer p:hover {
+      color: #861212;
+    }
+
+
+    @media (width < 900px) {
+      .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (width < 600px) {
+      .footer__container {
+        gap: 2rem;
+      }
+    }
+
+    #u {
+      color: gray;
+    }
+
+    p a {
+      text-decoration: none;
+    }
+
+    #all__about_us_masakop {
+      margin-top: 60px;
+    }
+
+
+    /************* Footer End ***************/
+  </style>
+</head>
+
+<body>
+  <!-- Start fist Page -->
+  <div class="first-page">
+    <header>
+      <div class="container">
+        <a class="logo">SEA<b>IT</b></a>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+
+
+          <!-- dropdown sa services pag click ma show pababa ang VLE -->
+          <li>
+            <div class="dropdown">
+              <p class="dropdownbutton">Service</p>
+              <div class="pag-pindot-mag-show-ang_pababa">
+                <a href="https://form.jotform.com/212148256429053">REQUEST FOR GRADE</a></a>
+                <a href="https://vle.seait-edu.ph/">VLE-VIRTUAL LEARNING ENVIRONMENT</a>
+              </div>
+            </div>
+          </li>
+          <!-- End nya -->
+
+
+          <!-- Sa about contact naman-->
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <!-- End nila -->
+
+            <!-- sa LoGo ka FAQ na picture ni sya-->
+            <button class="button__sa__fqa"><a href="faq.html">
+                <span class="icon__nya"></span></a>
+            </button>
+          </li>
+        </ul>
+        <!-- end FQA -->
+      </div>
+    </header>
+    <!-- End sa tanan sa top Nav bar -->
+
+
+
+
+
+
+    <!-- About us Start-->
+    <div id="all__about_us_masakop">
+
+      <div id="WELCOME__TO__SEAIT">
+        <h1>WELCOME TO SEAIT</h1>
+      </div>
+      <div id="WELCOME__TO__SEAIT">
+        <p>Committed to the total development of students</p>
+      </div>
+      <br>
+
+      <div id="About__Us_At__Our__History">About us</div>
+      <div>
+        <p id="all__small____text">The South East Asian Institute of Technology, Inc, offer free education to all
+          programs in college. The school is supported with
+          different goverment sectors and NG0s</p>
+      </div>
+      <br>
+      <div id="About__Us_At__Our__History">Our history</div>
+      <div id="all__small____text">
+        <p>South East Asian Institute of Technology, Inc. with its famous acronym SEAIT was farmed like a drama with a
+          glaring spotlights in
+          an amphitheater. The backdrops were up, the playwrights were ready, the actors and actresses well-dressed, the
+          archestra were
+          playing the timeless music and the curtain started to apen.....slowly.
+        </p>
+        <!-- correction -->
+
+
+        <p>February 2006 marked the foundation of the dream school, not with the breaking ground but with the first
+          cracking of the door in
+          literal sense, the school occupied a rented space at Shell Gasoline station near Valera's place still in Tupi
+          which catered minimal
+          population of students who too up vocational courses. The Tamayos reminisced their struggles upon putting the
+          desired
+          institution. One of these struggles was the conduciveness of learning employed in the pilot institution. What
+          learning is to be
+          expected in a small rectangular space? This question begged the public interest yet the family never surrender
+          neither tried to give
+          up their guiding philosophy- to give quality over quantity education. It was Mr. Reynaldo S Tamayo and is wife
+          Mrs. Rochalle P.
+          Tamayo who served as the pioneering administrators of the school. Both were driven by passion and love for
+          education and humanity and magnanimity were their secand skin.
+        </p>
+        <p>At first, SEAIT offered technical and vocational courses like Computer Pragramming NC |V and Computer
+          Hardware Servicing NC ||.
+          The breakthrough of History started on the second phase of the institution. SEAIT was granted by the Technical
+          Education Skills
+          Development Authoity (TESDA) to offer Hotel and Restaurant Management. The next year, the Commission on Higher
+          Education
+          (CHED) permitted to the school to offer the first four-years science course-Bachelor af Science in Information
+          Technology (BSIT)
+          which successfully persuaded the target market.
+        </p>
+
+        <p>The instiution followed a great
+          momentum when the CHED granted a laddered Bachelor of Science in Hotel and Restaurant
+          Management and Bachelor of Science in Business Administration maior in Marketing Management. Two years then.
+          the same
+          commission permitted the school to open and operate program for education courses. Bachelor of Elementary
+          Education and
+          Bachelor of Secondary Education major in English and Mathematics. Later, Bachelor of Science in Criminology,
+          Bachelor of Science
+          in Agricuture and Bachelor af Science in Civil Engineering were successfully established.</p>
+
+        <p>
+          The vision of the school becomes more visible as it extended from technical and vacational education into a
+          wider field. It
+          continues to prosper from the next consecutive years and eventually gained the government recognition from the
+          Department of
+          Educatian to operatek-12 program last June 2016. It includes kindergarten, junior and senior high school whose
+          population
+          smoothly grow after a year.</p>
+        <p>SEAIT, from the labor of the Tamayo's family, slowly yields into an immense kindship of administrators,
+          faculty members, students
+          and the community who desires to educate and be educated to make a tangible contribution to the community.
+          This band had
+          became the foundation of the school in seeking more ways and means on how to make a tangible contribution to
+          the community. This bond had become the foundation of the school in seeking more ways to and means on how to
+          make theschool would be able to become
+          stronger and substantial.
+          and History continues...
+        </p>
+      </div>
+      <div class="color__background">
+        <img src="litrato/seait.jpg" id="pic">
+        <img src="litrato/alightmotion.png" id="pic">
+        <img src="litrato/sea.png" id="pic">
+        <p></p>
+      </div>
+    </div>
+    <!-- about us end -->
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footer__container">
+        <div class="Four_section_down__footer">
+          <h3>SEA<b style="color:tomato;">IT</b></h3>
+          <p>
+            South East Asian Institute of Technology
+            <br>SEAIT is a private, non-stock and non-profit
+            Higher Education Institution in
+            SOCCSKSARGEN.
+          </p>
+        </div>
+        <div class="Four_section_down__footer">
+          <h4>Contact Us</h4>
+          <p>✉️&nbsp;seaitinc@yahoo.com REGISTAR</p>
+          <p>📞 (083) 226-1202 REGISTAR </p>
+
+        </div>
+
+        <div class="Four_section_down__footer">
+          <h4>Location</h4>
+          <p>➤ 9505 Tupi, South Cotabato, Philippines</p>
+        </div>
+
+        <div class="Four_section_down__footer">
+          <h4>Social Media</h4>
+          <p><a href="https://www.facebook.com/SEAITOfficial" id="u">Facebook</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+</body>
+
+</html>
